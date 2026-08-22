@@ -30,5 +30,168 @@
       "challenge": "challenge/junior/routing",
       "solution": "solution/junior/routing"
     }
+  },
+  {
+    "id": "junior-02-no-compila",
+    "level": "junior",
+    "belt": "blanco",
+    "order": 2,
+    "title": "TS y plantillas: no compila",
+    "topic": "TypeScript + plantillas",
+    "tags": [
+      "strictTemplates",
+      "standalone",
+      "signals",
+      "index-signature",
+      "pipes",
+      "control-flow"
+    ],
+    "failureModes": [
+      "no compila"
+    ],
+    "symptom": "no compila",
+    "timeMinutes": 25,
+    "bugs": 6,
+    "verify": {
+      "unit": true,
+      "e2e": false,
+      "build": true
+    },
+    "status": "ready",
+    "shortSlug": "no-compila",
+    "branch": {
+      "challenge": "challenge/junior/no-compila",
+      "solution": "solution/junior/no-compila"
+    }
+  },
+  {
+    "id": "mid-01-zoneless-no-refresca",
+    "level": "mid",
+    "belt": "azul",
+    "order": 1,
+    "title": "Zoneless: la UI no refresca",
+    "topic": "Change detection",
+    "tags": [
+      "zoneless",
+      "signals",
+      "OnPush",
+      "computed",
+      "setTimeout"
+    ],
+    "failureModes": [
+      "la UI se queda congelada"
+    ],
+    "symptom": "la UI se queda congelada",
+    "timeMinutes": 60,
+    "bugs": 4,
+    "verify": {
+      "unit": true,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "zoneless-no-refresca",
+    "branch": {
+      "challenge": "challenge/mid/zoneless-no-refresca",
+      "solution": "solution/mid/zoneless-no-refresca"
+    }
+  },
+  {
+    "id": "mid-02-race-condition",
+    "level": "mid",
+    "belt": "azul",
+    "order": 2,
+    "title": "RxJS: resultados fuera de orden",
+    "topic": "RxJS",
+    "tags": [
+      "rxjs",
+      "switchMap",
+      "debounceTime",
+      "takeUntilDestroyed",
+      "mock-api"
+    ],
+    "failureModes": [
+      "los resultados de búsqueda llegan fuera de orden"
+    ],
+    "symptom": "los resultados de búsqueda llegan fuera de orden",
+    "timeMinutes": 70,
+    "bugs": 4,
+    "verify": {
+      "unit": true,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "race-condition",
+    "branch": {
+      "challenge": "challenge/mid/race-condition",
+      "solution": "solution/mid/race-condition"
+    }
+  },
+  {
+    "id": "senior-01-perf-lista",
+    "level": "senior",
+    "belt": "negro",
+    "order": 1,
+    "title": "Perf: la lista se arrastra con 10k filas",
+    "topic": "Perf",
+    "tags": [
+      "perf",
+      "track",
+      "pure-pipe",
+      "computed",
+      "defer",
+      "virtual-scroll",
+      "bundle-budget"
+    ],
+    "failureModes": [
+      "la app se arrastra con 10k filas"
+    ],
+    "symptom": "la app se arrastra con 10k filas",
+    "timeMinutes": 120,
+    "bugs": 5,
+    "verify": {
+      "unit": false,
+      "e2e": true,
+      "build": true
+    },
+    "status": "ready",
+    "shortSlug": "perf-lista",
+    "branch": {
+      "challenge": "challenge/senior/perf-lista",
+      "solution": "solution/senior/perf-lista"
+    }
+  },
+  {
+    "id": "senior-02-memory-leak",
+    "level": "senior",
+    "belt": "negro",
+    "order": 2,
+    "title": "Ciclo de vida: la memoria crece al navegar",
+    "topic": "Ciclo de vida",
+    "tags": [
+      "DestroyRef",
+      "takeUntilDestroyed",
+      "effect",
+      "event-listener",
+      "rxjs"
+    ],
+    "failureModes": [
+      "la memoria crece al navegar"
+    ],
+    "symptom": "la memoria crece al navegar",
+    "timeMinutes": 120,
+    "bugs": 3,
+    "verify": {
+      "unit": true,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "memory-leak",
+    "branch": {
+      "challenge": "challenge/senior/memory-leak",
+      "solution": "solution/senior/memory-leak"
+    }
   }
 ]

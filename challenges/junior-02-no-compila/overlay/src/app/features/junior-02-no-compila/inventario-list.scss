@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.inventario-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alerta {
+  color: var(--dojo-danger);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}

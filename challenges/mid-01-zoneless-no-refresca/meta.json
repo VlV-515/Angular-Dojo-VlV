@@ -1,0 +1,14 @@
+{
+  "id": "mid-01-zoneless-no-refresca",
+  "level": "mid",
+  "belt": "azul",
+  "order": 1,
+  "title": "Zoneless: la UI no refresca",
+  "topic": "Change detection",
+  "tags": ["zoneless", "signals", "OnPush", "computed", "setTimeout"],
+  "failureModes": ["la UI se queda congelada"],
+  "timeMinutes": 60,
+  "bugs": 4,
+  "verify": { "unit": true, "e2e": true, "build": false },
+  "status": "ready"
+}

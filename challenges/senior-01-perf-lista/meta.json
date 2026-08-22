@@ -1,0 +1,14 @@
+{
+  "id": "senior-01-perf-lista",
+  "level": "senior",
+  "belt": "negro",
+  "order": 1,
+  "title": "Perf: la lista se arrastra con 10k filas",
+  "topic": "Perf",
+  "tags": ["perf", "track", "pure-pipe", "computed", "defer", "virtual-scroll", "bundle-budget"],
+  "failureModes": ["la app se arrastra con 10k filas"],
+  "timeMinutes": 120,
+  "bugs": 5,
+  "verify": { "unit": false, "e2e": true, "build": true },
+  "status": "ready"
+}

@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.alumnos {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cronometro {
+  margin-top: 1rem;
+}

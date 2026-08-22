@@ -1,0 +1,9 @@
+<li class="alumno-row">
+  <span class="nombre">{{ alumno.nombre }}</span>
+  <span class="estado" [class.presente]="alumno.presente">
+    {{ alumno.presente ? 'Presente' : 'Ausente' }}
+  </span>
+  @if (!alumno.presente) {
+    <button type="button" (click)="marcarPresente.emit(alumno.id)">Marcar presente</button>
+  }
+</li>

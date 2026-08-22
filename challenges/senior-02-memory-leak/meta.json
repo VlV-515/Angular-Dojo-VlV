@@ -1,0 +1,14 @@
+{
+  "id": "senior-02-memory-leak",
+  "level": "senior",
+  "belt": "negro",
+  "order": 2,
+  "title": "Ciclo de vida: la memoria crece al navegar",
+  "topic": "Ciclo de vida",
+  "tags": ["DestroyRef", "takeUntilDestroyed", "effect", "event-listener", "rxjs"],
+  "failureModes": ["la memoria crece al navegar"],
+  "timeMinutes": 120,
+  "bugs": 3,
+  "verify": { "unit": true, "e2e": true, "build": false },
+  "status": "ready"
+}

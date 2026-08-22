@@ -53,11 +53,11 @@ un jalón. ¿Quieres empezar de nuevo? `npm run reset`.
 | Rama | Cinturón | Tema | Síntoma | Verifica | Tiempo | Estado |
 |---|---|---|---|---|---|---|
 | `challenge/junior/routing` | blanco | Router | "pantalla en blanco" | Jest + Playwright | 30 min | **disponible** |
-| `challenge/junior/no-compila` | blanco | TS + plantillas | "no compila" | `ng build` + Jest | 25 min | próximamente |
-| `challenge/mid/zoneless-no-refresca` | azul | Change detection | "la UI se congela" | Jest + Playwright | 60 min | próximamente |
-| `challenge/mid/race-condition` | azul | RxJS | "resultados fuera de orden" | Jest (fake timers) + Playwright | 70 min | próximamente |
-| `challenge/senior/perf-lista` | negro | Performance | "se arrastra con 10k filas" | Playwright + budget de build | 120 min | próximamente |
-| `challenge/senior/memory-leak` | negro | Ciclo de vida | "la memoria crece al navegar" | Jest + Playwright | 120 min | próximamente |
+| `challenge/junior/no-compila` | blanco | TS + plantillas | "no compila" | `ng build` + Jest | 25 min | **disponible** |
+| `challenge/mid/zoneless-no-refresca` | azul | Change detection | "la UI se congela" | Jest + Playwright | 60 min | **disponible** |
+| `challenge/mid/race-condition` | azul | RxJS | "resultados fuera de orden" | Jest (fake timers) + Playwright | 70 min | **disponible** |
+| `challenge/senior/perf-lista` | negro | Performance | "se arrastra con 10k filas" | Playwright + budget de build | 120 min | **disponible** |
+| `challenge/senior/memory-leak` | negro | Ciclo de vida | "la memoria crece al navegar" | Jest + Playwright | 120 min | **disponible** |
 
 Por cada `challenge/<nivel>/<tema>` existe su contraparte `solution/<nivel>/<tema>` — el mismo
 reto, ya resuelto, publicada para que compares tu enfoque después de intentarlo (no antes).
@@ -113,7 +113,7 @@ abrir el PR.
 
 ## Roadmap
 
-**Tanda 1 (v1)** — en progreso, ver tabla de arriba.
+**Tanda 1 (v1)** — completa, ver tabla de arriba.
 
 **Tanda 2 — próximamente**
 

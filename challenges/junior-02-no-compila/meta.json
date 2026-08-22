@@ -1,0 +1,14 @@
+{
+  "id": "junior-02-no-compila",
+  "level": "junior",
+  "belt": "blanco",
+  "order": 2,
+  "title": "TS y plantillas: no compila",
+  "topic": "TypeScript + plantillas",
+  "tags": ["strictTemplates", "standalone", "signals", "index-signature", "pipes", "control-flow"],
+  "failureModes": ["no compila"],
+  "timeMinutes": 25,
+  "bugs": 6,
+  "verify": { "unit": true, "e2e": false, "build": true },
+  "status": "ready"
+}

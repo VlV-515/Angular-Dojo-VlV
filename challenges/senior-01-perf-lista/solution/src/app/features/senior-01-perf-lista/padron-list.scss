@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+.resumen {
+  margin: 0.75rem 0;
+  color: var(--dojo-text-muted);
+}
+
+.padron-viewport {
+  overflow-y: auto;
+  border: 1px solid var(--dojo-border);
+}
+
+.padron-track {
+  position: relative;
+}
+
+.padron {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fila {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid var(--dojo-border);
+  box-sizing: border-box;
+}

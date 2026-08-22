@@ -1,0 +1,21 @@
+<h1>Asistencia del dojo</h1>
+<p class="resumen">{{ presentes() }} de {{ total() }} presentes</p>
+
+<ul class="alumnos">
+  @for (alumno of alumnos(); track alumno.id) {
+    <app-alumno-row [alumno]="alumno" (marcarPresente)="marcarPresente($event)" />
+  }
+</ul>
+
+<form
+  class="alta"
+  (submit)="$event.preventDefault(); agregarAlumno(nuevoNombre.value); nuevoNombre.value = ''"
+>
+  <input #nuevoNombre placeholder="Nombre del alumno" />
+  <button type="submit">Agregar</button>
+</form>
+
+<section class="cronometro">
+  <p>{{ cronometroTexto() }}</p>
+  <button type="button" (click)="iniciarCronometro()">Iniciar cronómetro</button>
+</section>
