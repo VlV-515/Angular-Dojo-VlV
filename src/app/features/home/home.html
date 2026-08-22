@@ -1,0 +1,80 @@
+<section class="home-hero">
+  <p class="home-hero__eyebrow">Angular Dojo VlV</p>
+  <h1>Cada rama es una app rota. Tu trabajo es repararla.</h1>
+  <p class="home-hero__lede">
+    Sin servidor, sin envíos: clona el repo, elige un reto del catálogo, haz <code>git switch</code>
+    a su rama, lee el brief y corre <code>npm run verify</code> hasta que quede en verde.
+  </p>
+</section>
+
+@if (catalog.isLoading()) {
+  <p class="home-status" role="status">Cargando catálogo…</p>
+} @else if (catalog.error()) {
+  <p class="home-status home-status--error" role="alert">
+    No se pudo cargar <code>challenges.json</code>. Corre <code>npm run catalog</code> y recarga.
+  </p>
+} @else if (totalChallenges() === 0) {
+  <p class="home-status">
+    Todavía no hay retos publicados en el catálogo. Corre <code>npm run catalog</code> después de
+    crear uno en <code>challenges/</code>.
+  </p>
+} @else {
+  @for (group of belts(); track group.belt) {
+    <section class="belt-group" [attr.data-belt]="group.belt">
+      <h2 class="belt-group__title">
+        <span class="belt-chip" [attr.data-belt]="group.belt" aria-hidden="true"></span>
+        {{ group.label }}
+      </h2>
+
+      <div class="challenge-grid">
+        @for (challenge of group.challenges; track challenge.id) {
+          <article class="challenge-card" [attr.data-status]="challenge.status">
+            <header class="challenge-card__header">
+              <h3>{{ challenge.title }}</h3>
+              <span class="challenge-card__time">{{ challenge.timeMinutes }} min</span>
+            </header>
+
+            <p class="challenge-card__symptom">"{{ challenge.symptom }}"</p>
+
+            <dl class="challenge-card__meta">
+              <div>
+                <dt>Tema</dt>
+                <dd>{{ challenge.topic }}</dd>
+              </div>
+              <div>
+                <dt>Bugs</dt>
+                <dd>{{ challenge.bugs }}</dd>
+              </div>
+              <div>
+                <dt>Verifica</dt>
+                <dd>
+                  @if (challenge.verify.unit) {
+                    <span>Jest</span>
+                  }
+                  @if (challenge.verify.e2e) {
+                    <span>Playwright</span>
+                  }
+                  @if (challenge.verify.build) {
+                    <span>ng build</span>
+                  }
+                </dd>
+              </div>
+            </dl>
+
+            <ul class="challenge-card__tags" aria-label="Etiquetas">
+              @for (tag of challenge.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+
+            <footer class="challenge-card__footer">
+              <button type="button" class="copy-button" (click)="copyCommand(challenge)">
+                {{ copiedId() === challenge.id ? '✓ copiado' : 'git switch ' + challenge.branch.challenge }}
+              </button>
+            </footer>
+          </article>
+        }
+      </div>
+    </section>
+  }
+}

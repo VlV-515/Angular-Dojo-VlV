@@ -38,6 +38,14 @@ testem.log
 /typings
 __screenshots__/
 
+# Angular Dojo VlV
+/.dojo-progress.json
+/playwright-report
+/test-results
+/.worktrees
+/blob-report
+/playwright/.cache
+
 # System files
 .DS_Store
 Thumbs.db

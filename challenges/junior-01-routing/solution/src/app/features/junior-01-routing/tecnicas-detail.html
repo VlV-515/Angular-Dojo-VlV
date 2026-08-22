@@ -1,0 +1,9 @@
+<a routerLink="/tecnicas">← Volver</a>
+
+@if (tecnica(); as t) {
+  <h1>{{ t.nombre }}</h1>
+  <p class="belt-tag" [attr.data-belt]="t.cinturon">{{ t.cinturon }}</p>
+  <p>{{ t.descripcion }}</p>
+} @else {
+  <p>No encontré esa técnica.</p>
+}

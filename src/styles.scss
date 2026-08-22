@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+/* Angular Dojo VlV — tokens y reset globales. Sin librerías externas. */
+
+:root {
+  color-scheme: dark;
+
+  --dojo-bg: #0b0d12;
+  --dojo-bg-elevated: #12151c;
+  --dojo-surface: #171b24;
+  --dojo-border: #262b36;
+  --dojo-text: #e7e9ee;
+  --dojo-text-muted: #9aa1af;
+  --dojo-accent: #22d3ee;
+  --dojo-accent-strong: #06b6d4;
+  --dojo-danger: #f87171;
+
+  --belt-blanco-bg: #f8fafc;
+  --belt-blanco-border: #cbd5e1;
+  --belt-azul-bg: #1d4ed8;
+  --belt-azul-border: #3b82f6;
+  --belt-negro-bg: #0a0a0a;
+  --belt-negro-border: #52525b;
+
+  --dojo-radius-sm: 6px;
+  --dojo-radius-md: 12px;
+  --dojo-radius-lg: 20px;
+
+  --dojo-space-1: 0.25rem;
+  --dojo-space-2: 0.5rem;
+  --dojo-space-3: 0.75rem;
+  --dojo-space-4: 1rem;
+  --dojo-space-6: 1.5rem;
+  --dojo-space-8: 2rem;
+
+  --dojo-font-sans:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --dojo-font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--dojo-font-sans);
+  background: var(--dojo-bg);
+  color: var(--dojo-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--dojo-font-mono);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--dojo-accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

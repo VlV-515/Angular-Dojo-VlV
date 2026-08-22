@@ -6,7 +6,18 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test:unit": "jest",
+    "test:unit:watch": "jest --watch",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "catalog": "node scripts/build-catalog.mjs",
+    "build:branches": "node scripts/build-branches.mjs",
+    "ci:check-challenges": "node scripts/ci-check-challenges.mjs",
+    "play": "node scripts/play.mjs",
+    "verify": "node scripts/verify.mjs",
+    "hint": "node scripts/hint.mjs",
+    "reset": "node scripts/reset.mjs",
+    "progress": "node scripts/progress.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -19,6 +30,11 @@
         }
       }
     ]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   },
   "private": true,
   "dependencies": {
@@ -35,13 +51,13 @@
     "@angular/build": "^20.3.34",
     "@angular/cli": "^20.3.34",
     "@angular/compiler-cli": "^20.3.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.9.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "jest-preset-angular": "^17.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.9.2"
   }
 }

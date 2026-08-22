@@ -1,0 +1,34 @@
+[
+  {
+    "id": "junior-01-routing",
+    "level": "junior",
+    "belt": "blanco",
+    "order": 1,
+    "title": "Router: pantalla en blanco",
+    "topic": "Router",
+    "tags": [
+      "router",
+      "loadComponent",
+      "routerLink",
+      "withComponentInputBinding",
+      "standalone"
+    ],
+    "failureModes": [
+      "pantalla en blanco"
+    ],
+    "symptom": "pantalla en blanco",
+    "timeMinutes": 30,
+    "bugs": 5,
+    "verify": {
+      "unit": true,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "routing",
+    "branch": {
+      "challenge": "challenge/junior/routing",
+      "solution": "solution/junior/routing"
+    }
+  }
+]

@@ -1,0 +1,9 @@
+<h1>Técnicas del dojo</h1>
+<ul class="tecnicas-list">
+  @for (tecnica of tecnicas; track tecnica.id) {
+    <li>
+      <a [routerLink]="['/tecnicas', tecnica]">{{ tecnica.nombre }}</a>
+      <span class="belt-tag" [attr.data-belt]="tecnica.cinturon">{{ tecnica.cinturon }}</span>
+    </li>
+  }
+</ul>
