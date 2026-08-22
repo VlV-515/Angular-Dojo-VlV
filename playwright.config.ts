@@ -3,6 +3,9 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: '.',
   testMatch: ['e2e/**/*.e2e.spec.ts', 'verify/**/*.e2e.spec.ts'],
+  // challenges/*/verify solo corre materializado en una rama (ver scripts/verify.mjs);
+  // desde main nunca debe recogerse directamente.
+  testIgnore: ['**/challenges/**'],
   fullyParallel: true,
   forbidOnly: !!process.env['CI'],
   retries: process.env['CI'] ? 1 : 0,

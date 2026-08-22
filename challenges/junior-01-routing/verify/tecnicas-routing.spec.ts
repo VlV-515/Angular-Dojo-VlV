@@ -1,6 +1,6 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 
 import { routes } from '../src/app/app.routes';
@@ -9,7 +9,10 @@ import { TecnicasDetail } from '../src/app/features/junior-01-routing/tecnicas-d
 describe('Rutas de técnicas (junior-01-routing)', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideZonelessChangeDetection(), provideRouter(routes)],
+      providers: [
+        provideZonelessChangeDetection(),
+        provideRouter(routes, withComponentInputBinding()),
+      ],
     });
   });
 
@@ -31,7 +34,9 @@ describe('Rutas de técnicas (junior-01-routing)', () => {
 
 describe('TecnicasDetail (componente aislado)', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({ providers: [provideZonelessChangeDetection()] });
+    TestBed.configureTestingModule({
+      providers: [provideZonelessChangeDetection(), provideRouter([])],
+    });
   });
 
   it('muestra la técnica que corresponde al id recibido', () => {
