@@ -1,0 +1,36 @@
+<form class="inscripcion-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1>Inscripción al dojo</h1>
+
+  <label>
+    Nombre
+    <input type="text" [formControl]="controlNombre" />
+  </label>
+
+  <label>
+    Cinturón
+    <select [formControl]="controlCinturon">
+      <option value="" disabled>-- selecciona --</option>
+      <option value="blanco">Blanco</option>
+      <option value="azul">Azul</option>
+      <option value="negro">Negro</option>
+    </select>
+  </label>
+
+  <label class="inscripcion-form__checkbox">
+    <input type="checkbox" [formControl]="controlAcepto" />
+    Acepto el reglamento del dojo
+  </label>
+
+  <p class="inscripcion-form__estado">
+    {{ form.valid ? 'Listo para enviar' : 'Formulario incompleto' }}
+  </p>
+
+  <button type="submit" [disabled]="form.invalid">Inscribirme</button>
+</form>
+
+@if (enviado) {
+  <p class="inscripcion-form__confirmacion">
+    ¡Inscripción recibida! {{ enviado.nombre }} — cinturón {{ enviado.cinturon }} — reglamento
+    aceptado: {{ enviado.aceptoReglamento }}
+  </p>
+}

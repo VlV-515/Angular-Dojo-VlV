@@ -65,6 +65,139 @@
     }
   },
   {
+    "id": "junior-03-bindings-control-flow",
+    "level": "junior",
+    "belt": "blanco",
+    "order": 3,
+    "title": "Bindings y @if/@for: la lista no reacciona",
+    "topic": "Bindings y control flow",
+    "tags": [
+      "property-binding",
+      "event-binding",
+      "signals",
+      "if",
+      "for",
+      "track",
+      "control-flow"
+    ],
+    "failureModes": [
+      "algunos cambios no se reflejan en pantalla"
+    ],
+    "symptom": "algunos cambios no se reflejan en pantalla",
+    "timeMinutes": 30,
+    "bugs": 5,
+    "verify": {
+      "unit": true,
+      "e2e": false,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "bindings-control-flow",
+    "branch": {
+      "challenge": "challenge/junior/bindings-control-flow",
+      "solution": "solution/junior/bindings-control-flow"
+    }
+  },
+  {
+    "id": "junior-04-forms-basico",
+    "level": "junior",
+    "belt": "blanco",
+    "order": 4,
+    "title": "Formulario reactivo: nunca valida",
+    "topic": "Formularios reactivos",
+    "tags": [
+      "reactive-forms",
+      "FormGroup",
+      "FormControl",
+      "Validators",
+      "standalone"
+    ],
+    "failureModes": [
+      "el formulario nunca se marca como válido",
+      "el botón de enviar nunca se habilita"
+    ],
+    "symptom": "el formulario nunca se marca como válido · el botón de enviar nunca se habilita",
+    "timeMinutes": 35,
+    "bugs": 4,
+    "verify": {
+      "unit": true,
+      "e2e": false,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "forms-basico",
+    "branch": {
+      "challenge": "challenge/junior/forms-basico",
+      "solution": "solution/junior/forms-basico"
+    }
+  },
+  {
+    "id": "junior-05-signals-basico",
+    "level": "junior",
+    "belt": "blanco",
+    "order": 5,
+    "title": "Signals: el contador no cambia",
+    "topic": "Signals",
+    "tags": [
+      "signals",
+      "computed",
+      "reactivity",
+      "standalone"
+    ],
+    "failureModes": [
+      "el contador no cambia en pantalla",
+      "la racha se queda en 0 aunque hagas click",
+      "la meta diaria nunca sube en pantalla"
+    ],
+    "symptom": "el contador no cambia en pantalla · la racha se queda en 0 aunque hagas click · la meta diaria nunca sube en pantalla",
+    "timeMinutes": 30,
+    "bugs": 4,
+    "verify": {
+      "unit": true,
+      "e2e": false,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "signals-basico",
+    "branch": {
+      "challenge": "challenge/junior/signals-basico",
+      "solution": "solution/junior/signals-basico"
+    }
+  },
+  {
+    "id": "junior-06-http-resource",
+    "level": "junior",
+    "belt": "blanco",
+    "order": 6,
+    "title": "httpResource: la ficha no cambia",
+    "topic": "HTTP con resource/httpResource",
+    "tags": [
+      "httpResource",
+      "resource",
+      "signals",
+      "http",
+      "mock-api"
+    ],
+    "failureModes": [
+      "la ficha mostrada no cambia sin importar qué botón se presione",
+      "si la ficha no existe, la pantalla se queda en blanco sin avisar"
+    ],
+    "symptom": "la ficha mostrada no cambia sin importar qué botón se presione · si la ficha no existe, la pantalla se queda en blanco sin avisar",
+    "timeMinutes": 35,
+    "bugs": 4,
+    "verify": {
+      "unit": true,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "http-resource",
+    "branch": {
+      "challenge": "challenge/junior/http-resource",
+      "solution": "solution/junior/http-resource"
+    }
+  },
+  {
     "id": "mid-01-zoneless-no-refresca",
     "level": "mid",
     "belt": "azul",
@@ -126,6 +259,72 @@
     "branch": {
       "challenge": "challenge/mid/race-condition",
       "solution": "solution/mid/race-condition"
+    }
+  },
+  {
+    "id": "mid-03-di-ng0203",
+    "level": "mid",
+    "belt": "azul",
+    "order": 3,
+    "title": "DI: NG0203 al programar un recordatorio",
+    "topic": "Dependency Injection",
+    "tags": [
+      "inject",
+      "injection-context",
+      "InjectionToken",
+      "providers",
+      "NG0203"
+    ],
+    "failureModes": [
+      "la app truena con NG0203 al hacer cierta acción",
+      "un error de consola detiene la interacción"
+    ],
+    "symptom": "la app truena con NG0203 al hacer cierta acción · un error de consola detiene la interacción",
+    "timeMinutes": 55,
+    "bugs": 3,
+    "verify": {
+      "unit": true,
+      "e2e": false,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "di-ng0203",
+    "branch": {
+      "challenge": "challenge/mid/di-ng0203",
+      "solution": "solution/mid/di-ng0203"
+    }
+  },
+  {
+    "id": "mid-04-guards-interceptors",
+    "level": "mid",
+    "belt": "azul",
+    "order": 4,
+    "title": "Guard e interceptor: cualquiera entra al panel",
+    "topic": "Guards e interceptors",
+    "tags": [
+      "guards",
+      "interceptors",
+      "canActivateFn",
+      "httpInterceptorFn",
+      "urlTree"
+    ],
+    "failureModes": [
+      "cualquiera entra a la zona protegida sin iniciar sesión",
+      "las peticiones autenticadas siempre fallan"
+    ],
+    "symptom": "cualquiera entra a la zona protegida sin iniciar sesión · las peticiones autenticadas siempre fallan",
+    "timeMinutes": 60,
+    "bugs": 4,
+    "verify": {
+      "unit": true,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "guards-interceptors",
+    "branch": {
+      "challenge": "challenge/mid/guards-interceptors",
+      "solution": "solution/mid/guards-interceptors"
     }
   },
   {
@@ -192,6 +391,78 @@
     "branch": {
       "challenge": "challenge/senior/memory-leak",
       "solution": "solution/senior/memory-leak"
+    }
+  },
+  {
+    "id": "senior-03-ssr-hydration",
+    "level": "senior",
+    "belt": "negro",
+    "order": 3,
+    "title": "SSR: NG0500 y doble fetch al hidratar",
+    "topic": "SSR e hidratación",
+    "tags": [
+      "ssr",
+      "hydration",
+      "NG0500",
+      "NG0501",
+      "transfer-cache",
+      "platform-browser"
+    ],
+    "failureModes": [
+      "la consola tira NG0500/NG0501 al cargar",
+      "la app truena en el servidor al leer window",
+      "cada carga dispara la petición dos veces"
+    ],
+    "symptom": "la consola tira NG0500/NG0501 al cargar · la app truena en el servidor al leer window · cada carga dispara la petición dos veces",
+    "timeMinutes": 100,
+    "bugs": 3,
+    "verify": {
+      "unit": false,
+      "e2e": true,
+      "build": true
+    },
+    "status": "ready",
+    "shortSlug": "ssr-hydration",
+    "branch": {
+      "challenge": "challenge/senior/ssr-hydration",
+      "solution": "solution/senior/ssr-hydration"
+    }
+  },
+  {
+    "id": "senior-04-a11y-focus-trap",
+    "level": "senior",
+    "belt": "negro",
+    "order": 4,
+    "title": "A11y: el foco se escapa del diálogo",
+    "topic": "Accesibilidad: focus trap",
+    "tags": [
+      "a11y",
+      "aria",
+      "dialog",
+      "focus-trap",
+      "keyboard",
+      "axe-core"
+    ],
+    "failureModes": [
+      "con teclado, el foco se escapa del diálogo hacia el fondo de la página",
+      "al cerrar, el foco se pierde en vez de volver al botón que abrió el diálogo",
+      "al abrir el diálogo con el mouse o el teclado, el foco nunca entra a sus controles",
+      "la tecla Escape no cierra el diálogo",
+      "axe-core marca el diálogo como un role=\"dialog\" sin nombre accesible"
+    ],
+    "symptom": "con teclado, el foco se escapa del diálogo hacia el fondo de la página · al cerrar, el foco se pierde en vez de volver al botón que abrió el diálogo · al abrir el diálogo con el mouse o el teclado, el foco nunca entra a sus controles · la tecla Escape no cierra el diálogo · axe-core marca el diálogo como un role=\"dialog\" sin nombre accesible",
+    "timeMinutes": 90,
+    "bugs": 5,
+    "verify": {
+      "unit": false,
+      "e2e": true,
+      "build": false
+    },
+    "status": "ready",
+    "shortSlug": "a11y-focus-trap",
+    "branch": {
+      "challenge": "challenge/senior/a11y-focus-trap",
+      "solution": "solution/senior/a11y-focus-trap"
     }
   }
 ]

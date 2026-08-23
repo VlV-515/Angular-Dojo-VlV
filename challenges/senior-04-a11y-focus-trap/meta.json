@@ -1,0 +1,20 @@
+{
+  "id": "senior-04-a11y-focus-trap",
+  "level": "senior",
+  "belt": "negro",
+  "order": 4,
+  "title": "A11y: el foco se escapa del diálogo",
+  "topic": "Accesibilidad: focus trap",
+  "tags": ["a11y", "aria", "dialog", "focus-trap", "keyboard", "axe-core"],
+  "failureModes": [
+    "con teclado, el foco se escapa del diálogo hacia el fondo de la página",
+    "al cerrar, el foco se pierde en vez de volver al botón que abrió el diálogo",
+    "al abrir el diálogo con el mouse o el teclado, el foco nunca entra a sus controles",
+    "la tecla Escape no cierra el diálogo",
+    "axe-core marca el diálogo como un role=\"dialog\" sin nombre accesible"
+  ],
+  "timeMinutes": 90,
+  "bugs": 5,
+  "verify": { "unit": false, "e2e": true, "build": false },
+  "status": "ready"
+}

@@ -1,0 +1,36 @@
+<h1>Ficha técnica</h1>
+
+<div class="selector" role="group" aria-label="Elegir técnica">
+  @for (op of opciones; track op.id) {
+    <button
+      type="button"
+      class="chip"
+      [class.activo]="seleccionado() === op.id"
+      (click)="seleccionar(op.id)"
+    >
+      {{ op.etiqueta }}
+    </button>
+  }
+</div>
+
+@if (ficha.error()) {
+  <p class="error" role="alert">No se pudo cargar esta ficha. Intenta de nuevo.</p>
+} @else if (ficha.isLoading()) {
+  <p class="cargando">Cargando…</p>
+} @else if (ficha.value(); as f) {
+  <section class="ficha">
+    <h2>{{ f.nombre }}</h2>
+    <p class="cinturon">{{ f.cinturon }}</p>
+    <p class="descripcion">{{ f.descripcion }}</p>
+    <ul>
+      @for (p of f.puntosClave; track p) {
+        <li>{{ p }}</li>
+      }
+    </ul>
+    <p class="meta">Consultada {{ f.consultas }} veces</p>
+  </section>
+} @else {
+  <p>Elige una ficha para empezar.</p>
+}
+
+<button type="button" class="reintentar" (click)="reintentar()">Reintentar</button>

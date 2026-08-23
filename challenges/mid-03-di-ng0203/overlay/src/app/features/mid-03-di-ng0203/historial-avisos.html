@@ -1,0 +1,10 @@
+<h2>Historial</h2>
+@if (historial().length === 0) {
+  <p class="vacio">Todavía no hay avisos.</p>
+} @else {
+  <ul>
+    @for (aviso of historial(); track $index) {
+      <li>{{ aviso }}</li>
+    }
+  </ul>
+}

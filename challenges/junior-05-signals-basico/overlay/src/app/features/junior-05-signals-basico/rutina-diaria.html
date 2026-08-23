@@ -1,0 +1,20 @@
+<h1>Rutina de hoy</h1>
+
+<section class="bloque">
+  <h2>Repeticiones</h2>
+  <!-- Bug: falta invocar la señal — esto debería ser `{{ contador() }}`. -->
+  <p class="valor">{{ contador }}</p>
+  <button type="button" (click)="incrementar()">+1 repetición</button>
+</section>
+
+<section class="bloque">
+  <h2>Racha</h2>
+  <p class="valor">{{ racha() }} días seguidos</p>
+  <button type="button" (click)="sumarRacha()">Sumar día de racha</button>
+</section>
+
+<section class="bloque">
+  <h2>Meta diaria</h2>
+  <p class="valor">{{ metaTexto() }}</p>
+  <button type="button" (click)="subirMeta()">Subir meta +1</button>
+</section>

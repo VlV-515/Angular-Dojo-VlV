@@ -2,7 +2,7 @@
 import { parseArgs } from 'node:util';
 
 import { buildCatalogEntries, writeCatalog } from './lib/catalog.mjs';
-import { commitWorktree, materializeChallenge, removeWorktree } from './lib/branches.mjs';
+import { commitWorktree, materializeChallenge, pushBranch, removeWorktree } from './lib/branches.mjs';
 
 const { values } = parseArgs({
   options: {
@@ -45,17 +45,18 @@ for (const entry of targets) {
       commitWorktree(dir, branchName);
     }
 
-    console.log(`${dryRun ? '[dry-run] ' : '[ok]      '}${branchName.padEnd(32)} <- ${dir}`);
+    if (!dryRun && values.push) {
+      pushBranch(branchName);
+    }
+
+    const tag = dryRun ? '[dry-run] ' : values.push ? '[pushed]  ' : '[ok]      ';
+    console.log(`${tag}${branchName.padEnd(32)} <- ${dir}`);
     results.push({ branchName, dir });
 
     if (!values.keep) {
       removeWorktree(dir);
     }
   }
-}
-
-if (values.push) {
-  console.log('\n--push no está implementado todavía: revisa las ramas locales y publícalas cuando quieras.');
 }
 
 console.log(

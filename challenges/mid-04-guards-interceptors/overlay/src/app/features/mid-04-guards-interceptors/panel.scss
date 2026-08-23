@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.panel-datos {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.panel-error {
+  color: var(--dojo-text-muted);
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mid-04-guards-interceptors",
+  "level": "mid",
+  "belt": "azul",
+  "order": 4,
+  "title": "Guard e interceptor: cualquiera entra al panel",
+  "topic": "Guards e interceptors",
+  "tags": ["guards", "interceptors", "canActivateFn", "httpInterceptorFn", "urlTree"],
+  "failureModes": [
+    "cualquiera entra a la zona protegida sin iniciar sesión",
+    "las peticiones autenticadas siempre fallan"
+  ],
+  "timeMinutes": 60,
+  "bugs": 4,
+  "verify": { "unit": true, "e2e": true, "build": false },
+  "status": "ready"
+}

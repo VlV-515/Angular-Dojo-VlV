@@ -1,0 +1,14 @@
+<h1>Panel de práctica</h1>
+
+<section class="consejo" data-testid="consejo">
+  @if (consejo(); as c) {
+    <p>{{ c.consejo }}</p>
+    <p class="peticion-id" data-testid="peticion-id">{{ c.peticionId }}</p>
+  } @else {
+    <p>Cargando consejo...</p>
+  }
+</section>
+
+<button type="button" (click)="marcarVisto()">
+  {{ visto() ? 'Ya lo viste ✅' : 'Marcar como visto' }}
+</button>

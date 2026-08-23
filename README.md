@@ -14,6 +14,8 @@ No hay backend, no hay envíos, no hay ranking en la nube. Clonas el repo, elige
 lees el brief, arreglas el código en tu editor y corres un comando. Así de simple, y así de
 honesto: si `npm run verify` queda en verde, lo resolviste. Si no, todavía no.
 
+![npm run play, verify en rojo, se arregla el bug, verify en verde](docs/demo.gif)
+
 ## Cómo funciona
 
 **1. Clona y elige un reto**
@@ -54,16 +56,41 @@ un jalón. ¿Quieres empezar de nuevo? `npm run reset`.
 |---|---|---|---|---|---|---|
 | `challenge/junior/routing` | blanco | Router | "pantalla en blanco" | Jest + Playwright | 30 min | **disponible** |
 | `challenge/junior/no-compila` | blanco | TS + plantillas | "no compila" | `ng build` + Jest | 25 min | **disponible** |
+| `challenge/junior/bindings-control-flow` | blanco | Bindings y control flow | "algunos cambios no se reflejan en pantalla" | Jest | 30 min | **disponible** |
+| `challenge/junior/forms-basico` | blanco | Formularios reactivos | "el formulario nunca valida" | Jest | 35 min | **disponible** |
+| `challenge/junior/signals-basico` | blanco | Signals | "el contador no cambia" | Jest | 30 min | **disponible** |
+| `challenge/junior/http-resource` | blanco | HTTP con `resource`/`httpResource` | "la ficha no cambia" | Jest + Playwright | 35 min | **disponible** |
 | `challenge/mid/zoneless-no-refresca` | azul | Change detection | "la UI se congela" | Jest + Playwright | 60 min | **disponible** |
 | `challenge/mid/race-condition` | azul | RxJS | "resultados fuera de orden" | Jest (fake timers) + Playwright | 70 min | **disponible** |
+| `challenge/mid/di-ng0203` | azul | Dependency Injection | "la app truena con NG0203" | Jest (fake timers) | 55 min | **disponible** |
+| `challenge/mid/guards-interceptors` | azul | Guards e interceptors | "cualquiera entra al panel" | Jest + Playwright | 60 min | **disponible** |
 | `challenge/senior/perf-lista` | negro | Performance | "se arrastra con 10k filas" | Playwright + budget de build | 120 min | **disponible** |
 | `challenge/senior/memory-leak` | negro | Ciclo de vida | "la memoria crece al navegar" | Jest + Playwright | 120 min | **disponible** |
+| `challenge/senior/ssr-hydration` | negro | SSR e hidratación | "NG0500/NG0501 y doble fetch al hidratar" | Playwright + `ng build` (SSR) | 100 min | **disponible** |
+| `challenge/senior/a11y-focus-trap` | negro | Accesibilidad: focus trap | "el foco se escapa del diálogo" | Playwright + axe-core | 90 min | **disponible** |
 
 Por cada `challenge/<nivel>/<tema>` existe su contraparte `solution/<nivel>/<tema>` — el mismo
 reto, ya resuelto, publicada para que compares tu enfoque después de intentarlo (no antes).
 
 > El catálogo completo, con metadatos, vive en [`challenges.json`](challenges.json) y se genera
 > con `npm run catalog` a partir de `challenges/*/meta.json`.
+
+### Las ramas se regeneran
+
+`main` es la única fuente de verdad; las ramas `challenge/*` y `solution/*` son un artefacto
+**generado** por `npm run build:branches` a partir del tag `base-v1`. Cuando se agregan retos o se
+ajusta el shell, esas ramas se vuelven a materializar y se publican de nuevo con
+`git push --force-with-lease`, que reescribe su historia (un solo commit por rama, siempre).
+
+Si ya tenías el repo clonado, antes de volver a intentar un reto corre:
+
+```bash
+git fetch --all --prune
+```
+
+Así traes las ramas actualizadas y limpias las que ya no existen en el remoto. No hagas
+`git pull` dentro de una rama `challenge/*` con cambios locales sin commitear — mejor
+`npm run reset` o vuelve a hacer `npm run play` desde `main`.
 
 ## Reglas del dojo
 
@@ -82,9 +109,9 @@ reto, ya resuelto, publicada para que compares tu enfoque después de intentarlo
 
 | Cinturón | Retos que lo componen | Lo que demuestra |
 |---|---|---|
-| **Blanco (junior)** | routing, no-compila | Lees un error de TypeScript con `strictTemplates` y sabes qué te está diciendo. Entiendes cómo Angular resuelve rutas, `loadComponent` y el orden en que se evalúan. |
-| **Azul (mid)** | zoneless-no-refresca, race-condition | Sabes por qué una mutación no dispara change detection en una app zoneless, y qué operador de RxJS usar (y cuál no) cuando el orden de las respuestas importa. |
-| **Negro (senior)** | perf-lista, memory-leak | Puedes perfilar por qué una lista de 10 000 filas se arrastra y arreglarlo sin reescribir la app, y encontrar una suscripción que nadie liberó antes de que se note en producción. |
+| **Blanco (junior)** | routing, no-compila, bindings-control-flow, forms-basico, signals-basico, http-resource | Lees un error de TypeScript con `strictTemplates` y sabes qué te está diciendo. Entiendes bindings, `@if`/`@for`, formularios reactivos, signals básicas y cómo `resource`/`httpResource` cargan datos. |
+| **Azul (mid)** | zoneless-no-refresca, race-condition, di-ng0203, guards-interceptors | Sabes por qué una mutación no dispara change detection en una app zoneless, qué operador de RxJS usar cuando el orden de las respuestas importa, por qué `inject()` truena con NG0203 fuera de contexto, y cómo proteger una ruta y una petición de verdad. |
+| **Negro (senior)** | perf-lista, memory-leak, ssr-hydration, a11y-focus-trap | Puedes perfilar por qué una lista de 10 000 filas se arrastra, encontrar una suscripción que nadie liberó, diagnosticar un error de hidratación en SSR (NG0500/NG0501) y garantizar que un diálogo sea usable con teclado y lector de pantalla. |
 
 `npm run progress` pinta tu avance por cinturón en cualquier momento.
 
@@ -113,16 +140,12 @@ abrir el PR.
 
 ## Roadmap
 
-**Tanda 1 (v1)** — completa, ver tabla de arriba.
-
-**Tanda 2 — próximamente**
-
-- junior: bindings y control flow · forms básico · signals básico · HTTP con `resource`/`httpResource`
-- mid: inyección de dependencias y `NG0203` · guards e interceptors · forms avanzado con `ControlValueAccessor`
-- senior: SSR con errores de hydration (`NG0500`/`NG0501`) · API pública de librería (`input()`/`output()`/`model()`) · `NG0100`/`NG0200` · a11y con focus trap
+**Tanda 1 y Tanda 2** — completas, ver tabla de arriba (14 retos).
 
 **Tanda 3 — próximamente**
 
+- mid: forms avanzado con `ControlValueAccessor` · tests rojos
+- senior: API pública de librería (`input()`/`output()`/`model()`) · `NG0100`/`NG0200` · `@defer`/chunks/budgets
 - Expansión según lo que pida la comunidad. Abre un issue si tienes un bug real de Angular que
   te haya dolido y creas que merece ser un reto.
 
@@ -147,14 +170,18 @@ arranca más rápido y tiene mejor soporte para fake timers, útil para los reto
 carrera.
 
 **¿Por qué las ramas no se editan a mano?**
-Con 6+ retos y una sola plataforma base, un cambio en el shell (una versión de Angular, un ajuste
+Con 14 retos y una sola plataforma base, un cambio en el shell (una versión de Angular, un ajuste
 de estilos) tendría que replicarse a mano en cada rama. En vez de eso, `main` es la única fuente
-de verdad y `scripts/build-branches.mjs` regenera las ramas desde ahí.
+de verdad y `scripts/build-branches.mjs` regenera las ramas desde ahí (ver "Las ramas se
+regeneran" más arriba).
 
 ## Stack técnico
 
 - **Angular 20** — standalone components, signals, `provideZonelessChangeDetection()`, nuevo
-  control flow (`@if`/`@for`), `httpResource()`.
+  control flow (`@if`/`@for`), `resource()`/`httpResource()`.
+- **`@angular/ssr`** vive en el `package.json` base como dependencia, pero solo se activa desde el
+  `overlay/` del reto `senior/ssr-hydration` — el resto de los retos y el shell corren 100% en el
+  navegador.
 - **TypeScript strict** — `strict`, `strictTemplates`, `noPropertyAccessFromIndexSignature`.
 - **Jest** + `jest-preset-angular` (`setupZonelessTestEnv()`) para unit e integración con TestBed.
 - **Playwright** + `@axe-core/playwright` para e2e y accesibilidad contra Chromium real.

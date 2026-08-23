@@ -1,0 +1,14 @@
+{
+  "id": "junior-03-bindings-control-flow",
+  "level": "junior",
+  "belt": "blanco",
+  "order": 3,
+  "title": "Bindings y @if/@for: la lista no reacciona",
+  "topic": "Bindings y control flow",
+  "tags": ["property-binding", "event-binding", "signals", "if", "for", "track", "control-flow"],
+  "failureModes": ["algunos cambios no se reflejan en pantalla"],
+  "timeMinutes": 30,
+  "bugs": 5,
+  "verify": { "unit": true, "e2e": false, "build": false },
+  "status": "ready"
+}

@@ -1,0 +1,12 @@
+<h1>Acceso al panel</h1>
+
+<p>
+  Estado de sesión:
+  <strong>{{ authState.isAuthenticated() ? 'con sesión iniciada' : 'sin sesión' }}</strong>
+</p>
+
+<button type="button" (click)="alternarSesion()">
+  {{ authState.isAuthenticated() ? 'Cerrar sesión (falsa)' : 'Iniciar sesión (falsa)' }}
+</button>
+
+<p><a routerLink="/panel">Ir al panel</a></p>

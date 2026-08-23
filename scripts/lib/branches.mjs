@@ -96,3 +96,8 @@ export function removeWorktree(dir) {
     rmSync(dir, { recursive: true, force: true });
   }
 }
+
+/** Publica una rama local a `origin` con --force-with-lease (nunca --force a secas). */
+export function pushBranch(branchName) {
+  runGit(['push', '--force-with-lease', 'origin', `refs/heads/${branchName}:refs/heads/${branchName}`]);
+}
