@@ -1,0 +1,19 @@
+{
+  "id": "junior-02-no-compila",
+  "level": "junior",
+  "belt": "blanco",
+  "variant": "solution",
+  "branch": {
+    "challenge": "challenge/junior/no-compila",
+    "solution": "solution/junior/no-compila"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": false,
+    "build": true
+  },
+  "files": {
+    "verify/inventario-no-compila.spec.ts": "4c65a352adfc3b7f19e8f2d1580a277dbef0c6816fd57703a64d353c2a6ca96e"
+  },
+  "generatedAt": "2026-11-02T15:21:20.416Z"
+}

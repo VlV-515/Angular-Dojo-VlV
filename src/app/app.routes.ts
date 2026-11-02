@@ -4,6 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
-    title: 'Angular Dojo VlV — catálogo de retos',
+  },
+  {
+    path: 'inventario',
+    loadComponent: () =>
+      import('./features/junior-02-no-compila/inventario-list').then((m) => m.InventarioList),
   },
 ];
