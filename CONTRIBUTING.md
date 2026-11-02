@@ -85,7 +85,8 @@ existente se rompió.
 
 El sitio de GitHub Pages vive en `site/` (HTML + JS sin build) y lee `challenges.json`; se
 publica solo con `.github/workflows/pages.yml` al hacer push a `main`. No viaja a las ramas de
-reto. `.devcontainer/` sí viaja: si lo cambias, mueve `base-v1` y regenera las ramas
+reto. Los escudos de cinturón salen de `site/belts.mjs`; si cambias sus colores, corre
+`node scripts/build-belts.mjs` para regenerar `site/favicon.svg` y `docs/belts/*.svg`. `.devcontainer/` sí viaja: si lo cambias, mueve `base-v1` y regenera las ramas
 (`npm run build:branches -- --push`) para que Codespaces lo tome.
 
 ## Estilo de código y de commits

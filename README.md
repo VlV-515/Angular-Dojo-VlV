@@ -117,6 +117,15 @@ Así traes las ramas actualizadas y limpias las que ya no existen en el remoto. 
    que quieras para investigar — pero si solo copias sin entender, el próximo reto te va a costar
    el doble.
 
+## Cinturones
+
+| <img src="docs/belts/blanco.svg" width="64" alt="Cinturón blanco"> | <img src="docs/belts/azul.svg" width="64" alt="Cinturón azul"> | <img src="docs/belts/negro.svg" width="64" alt="Cinturón negro"> | <img src="docs/belts/maestro.svg" width="64" alt="Cinturón maestro"> |
+|:---:|:---:|:---:|:---:|
+| **Blanco**<br>Punto de partida | **Azul**<br>Terminar los 6 retos de blanco | **Negro**<br>Terminar los 4 retos de azul | **Maestro**<br>Terminar los 4 retos de negro |
+
+En el [sitio del dojo](https://vlv-515.github.io/Angular-Dojo-VlV/) el logo y el favicon toman el color
+de tu cinturón actual según los retos que marques como resueltos.
+
 ## Rúbrica: qué significa pasar cada cinturón
 
 | Cinturón | Retos que lo componen | Lo que demuestra |

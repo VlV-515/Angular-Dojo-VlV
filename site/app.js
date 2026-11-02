@@ -1,3 +1,5 @@
+import { RANKS, currentRankIndex, shieldSvg } from './belts.mjs';
+
 const REPO = 'VlV-515/Angular-Dojo-VlV';
 const PROGRESS_KEY = 'dojo-solved';
 
@@ -39,7 +41,7 @@ function codespacesUrl(branch) {
   return `https://codespaces.new/${REPO}?ref=${encodeURIComponent(branch)}&quickstart=1`;
 }
 
-function renderCard(entry, solved) {
+function renderCard(entry, solved, onChange) {
   const id = `solved-${entry.id}`;
   const checkbox = el('input', { type: 'checkbox', id });
   checkbox.checked = solved.has(entry.id);
@@ -48,6 +50,7 @@ function renderCard(entry, solved) {
     else solved.delete(entry.id);
     writeSolved(solved);
     card.classList.toggle('is-solved', checkbox.checked);
+    onChange();
   });
 
   const verifies = Object.entries(entry.verify)
@@ -97,6 +100,47 @@ function renderCard(entry, solved) {
   return card;
 }
 
+function svgDataUrl(svg) {
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
+function renderBelts(ready, solved) {
+  const current = currentRankIndex(ready, solved);
+  const rank = RANKS[current];
+  const icon = svgDataUrl(shieldSvg(rank.id));
+  document.getElementById('logo').src = icon;
+  document.getElementById('favicon').href = icon;
+
+  const next = RANKS[current + 1];
+  document.getElementById('rank').textContent = next
+    ? `Tu cinturón: ${rank.name} · siguiente: ${next.name}`
+    : `Tu cinturón: ${rank.name} · completaste el dojo`;
+
+  const root = document.getElementById('belts');
+  root.replaceChildren(
+    ...RANKS.map((belt, index) => {
+      const card = el('article', {
+        class: `belt-card${index === current ? ' is-current' : ''}${index > current ? ' is-locked' : ''}`,
+      });
+      let requirement = 'Punto de partida';
+      if (belt.unlockedBy) {
+        const level = ready.filter((entry) => entry.level === belt.unlockedBy.level);
+        const done = level.filter((entry) => solved.has(entry.id)).length;
+        const from = RANKS.find((r) => r.id === belt.unlockedBy.belt).name.toLowerCase();
+        requirement = `Terminar los ${level.length} retos de ${from} (${done}/${level.length})`;
+      }
+      const state = index < current ? 'Obtenido' : index === current ? 'Actual' : 'Bloqueado';
+      card.innerHTML = shieldSvg(belt.id);
+      card.append(
+        el('h3', {}, belt.name),
+        el('p', { class: 'belt-state' }, state),
+        el('p', {}, requirement),
+      );
+      return card;
+    }),
+  );
+}
+
 async function main() {
   const status = document.getElementById('catalog-status');
   const root = document.getElementById('catalog');
@@ -112,6 +156,8 @@ async function main() {
 
   const ready = catalog.filter((entry) => entry.status === 'ready');
   const solved = readSolved();
+  const refreshBelts = () => renderBelts(ready, solved);
+  refreshBelts();
   status.textContent = `${ready.length} retos disponibles. Tu avance se guarda solo en este navegador.`;
 
   for (const belt of BELTS) {
@@ -124,7 +170,7 @@ async function main() {
         'section',
         { class: `belt belt-${belt.level}` },
         el('h3', {}, belt.name, el('span', { class: 'belt-sub' }, ` · ${belt.subtitle}`)),
-        el('div', { class: 'grid' }, ...entries.map((entry) => renderCard(entry, solved))),
+        el('div', { class: 'grid' }, ...entries.map((entry) => renderCard(entry, solved, refreshBelts))),
       ),
     );
   }

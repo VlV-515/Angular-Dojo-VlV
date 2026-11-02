@@ -48,6 +48,7 @@ export function materializeChallenge({ entry, variant, real }) {
   rmSync(join(dir, 'challenges'), { recursive: true, force: true });
   rmSync(join(dir, 'scripts', 'build-branches.mjs'), { force: true });
   rmSync(join(dir, 'site'), { recursive: true, force: true });
+  rmSync(join(dir, 'scripts', 'build-belts.mjs'), { force: true });
   rmSync(join(dir, '.github', 'workflows', 'pages.yml'), { force: true });
 
   cpSync(join(challengeDir, 'overlay'), dir, { recursive: true });

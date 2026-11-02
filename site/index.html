@@ -8,14 +8,21 @@
       name="description"
       content="Retos de Angular ya rotos. Ábrelos en el navegador con GitHub Codespaces, arréglalos y pasa el verificador."
     />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" id="favicon" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js"></script>
   </head>
   <body>
     <header class="hero">
       <div class="wrap">
         <p class="eyebrow">Angular 20 · zoneless · TypeScript strict</p>
-        <h1>Angular Dojo VlV</h1>
+        <div class="brand">
+          <img id="logo" class="logo" src="favicon.svg" alt="" width="64" height="64" />
+          <div>
+            <h1>Angular Dojo VlV</h1>
+            <p id="rank" class="rank">Tu cinturón: Blanco</p>
+          </div>
+        </div>
         <p class="lead">
           Cada reto es una app de Angular ya rota. Tu trabajo es repararla, y
           <code>npm run verify</code> te dice si lo lograste.
@@ -62,6 +69,15 @@
         <h2 id="retos">Retos</h2>
         <p id="catalog-status" class="note">Cargando catálogo…</p>
         <div id="catalog"></div>
+      </section>
+
+      <section aria-labelledby="cinturones">
+        <h2 id="cinturones">Cinturones</h2>
+        <p class="note">
+          Todos empiezan en blanco. Marca "Lo resolví" en cada reto que pases con
+          <code>npm run verify</code>; al completar todos los retos de un cinturón subes al siguiente.
+        </p>
+        <div id="belts" class="belts"></div>
       </section>
 
       <section aria-labelledby="reglas">

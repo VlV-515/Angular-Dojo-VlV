@@ -91,7 +91,25 @@ code {
 h1 {
   font-size: clamp(2rem, 6vw, 3.2rem);
   line-height: 1.1;
-  margin: 8px 0 16px;
+  margin: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0 16px;
+}
+
+.logo {
+  flex: none;
+  width: clamp(48px, 10vw, 72px);
+  height: auto;
+}
+
+.rank {
+  margin: 4px 0 0;
+  color: var(--muted);
 }
 
 .lead {
@@ -261,4 +279,47 @@ h2 {
   padding-bottom: 32px;
   border-top: 1px solid var(--border);
   color: var(--muted);
+}
+
+.belts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.belt-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.belt-card svg {
+  width: 56px;
+  height: 56px;
+}
+
+.belt-card.is-locked svg {
+  opacity: 0.3;
+}
+
+.belt-card.is-current {
+  border-color: var(--accent);
+}
+
+.belt-card h3 {
+  margin: 8px 0 2px;
+  font-size: 1rem;
+}
+
+.belt-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.belt-card .belt-state {
+  color: var(--text);
+  font-weight: 600;
 }
