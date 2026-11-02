@@ -1,0 +1,20 @@
+{
+  "id": "mid-01-zoneless-no-refresca",
+  "level": "mid",
+  "belt": "azul",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/mid/zoneless-no-refresca",
+    "solution": "solution/mid/zoneless-no-refresca"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/asistencia-board.spec.ts": "8e5f93696a2c88ca26ba7b09fafc28d6db3a1f919193f60ed520fce9a47371d4",
+    "verify/asistencia.e2e.spec.ts": "70a0e196f6486d0c35654009288d4d9579cdb9ff39c9eece5b975485ec67bb92"
+  },
+  "generatedAt": "2026-11-02T15:21:22.724Z"
+}
