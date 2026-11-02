@@ -1,0 +1,19 @@
+{
+  "id": "junior-05-signals-basico",
+  "level": "junior",
+  "belt": "blanco",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/junior/signals-basico",
+    "solution": "solution/junior/signals-basico"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": false,
+    "build": false
+  },
+  "files": {
+    "verify/junior-05.spec.ts": "026d44c89c52bbfbdb6aed595cdad10f16116ae18cec2e2983f981b08c946f25"
+  },
+  "generatedAt": "2026-11-02T15:21:21.583Z"
+}
