@@ -1,0 +1,20 @@
+{
+  "id": "mid-04-guards-interceptors",
+  "level": "mid",
+  "belt": "azul",
+  "variant": "solution",
+  "branch": {
+    "challenge": "challenge/mid/guards-interceptors",
+    "solution": "solution/mid/guards-interceptors"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/mid-04.e2e.spec.ts": "477188882eed2ed51f70d1ffcc505f8bc9678470e6e7dd15e452a6d26133ecfa",
+    "verify/mid-04.spec.ts": "7a97a54ab08f4bed0121d6e4e683dcf3bd188b817844f2c8d1064f19ed7b3e98"
+  },
+  "generatedAt": "2026-11-02T15:21:24.526Z"
+}
