@@ -1,0 +1,19 @@
+{
+  "id": "senior-04-a11y-focus-trap",
+  "level": "senior",
+  "belt": "negro",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/senior/a11y-focus-trap",
+    "solution": "solution/senior/a11y-focus-trap"
+  },
+  "verify": {
+    "unit": false,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/senior-04.e2e.spec.ts": "3aeda9e8064af2e73a28ae874c3f9cf8082cfb4999e4bfb1e4bfc80a4cfe4461"
+  },
+  "generatedAt": "2026-11-02T15:21:26.083Z"
+}
