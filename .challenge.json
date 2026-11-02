@@ -1,0 +1,20 @@
+{
+  "id": "junior-01-routing",
+  "level": "junior",
+  "belt": "blanco",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/junior/routing",
+    "solution": "solution/junior/routing"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/tecnicas-routing.spec.ts": "7f3c5307b8a023527f6640c58ad88bb7bd808cddf934d9ae949a7e8ffd54544d",
+    "verify/tecnicas.e2e.spec.ts": "359ea73cd41041874a752f9bc5ade0abb01c2715de1707fdb20b544e0cc3ae24"
+  },
+  "generatedAt": "2026-11-02T15:21:19.731Z"
+}
