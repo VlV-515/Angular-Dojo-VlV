@@ -1,0 +1,20 @@
+{
+  "id": "senior-02-memory-leak",
+  "level": "senior",
+  "belt": "negro",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/senior/memory-leak",
+    "solution": "solution/senior/memory-leak"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/panel-en-vivo.e2e.spec.ts": "eb5a0611d1bbce654bb1dae805be703a77875a43737c66848ae3f1d332fc4633",
+    "verify/panel-en-vivo.spec.ts": "7b9491c6d22d997f6340c6fc811ba68b72dc7773c42e87306adc5fd4dd144126"
+  },
+  "generatedAt": "2026-11-02T15:21:25.201Z"
+}

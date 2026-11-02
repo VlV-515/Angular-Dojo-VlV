@@ -4,6 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
-    title: 'Angular Dojo VlV — catálogo de retos',
+  },
+  {
+    path: 'panel-en-vivo',
+    loadComponent: () =>
+      import('./features/senior-02-memory-leak/panel-en-vivo').then((m) => m.PanelEnVivo),
   },
 ];
