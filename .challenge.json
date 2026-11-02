@@ -1,0 +1,19 @@
+{
+  "id": "senior-03-ssr-hydration",
+  "level": "senior",
+  "belt": "negro",
+  "variant": "solution",
+  "branch": {
+    "challenge": "challenge/senior/ssr-hydration",
+    "solution": "solution/senior/ssr-hydration"
+  },
+  "verify": {
+    "unit": false,
+    "e2e": true,
+    "build": true
+  },
+  "files": {
+    "verify/senior-03.e2e.spec.ts": "9e55f8647d777f5e5b3396510c2a88d28c326432c607aeef474f0113dc90f10a"
+  },
+  "generatedAt": "2026-11-02T15:21:25.877Z"
+}
