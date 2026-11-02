@@ -4,6 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
-    title: 'Angular Dojo VlV — catálogo de retos',
+  },
+  {
+    path: 'padron',
+    loadComponent: () =>
+      import('./features/senior-01-perf-lista/padron-list').then((m) => m.PadronList),
   },
 ];
