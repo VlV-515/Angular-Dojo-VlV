@@ -4,6 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
-    title: 'Angular Dojo VlV — catálogo de retos',
+  },
+  {
+    path: 'buscador',
+    loadComponent: () =>
+      import('./features/mid-02-race-condition/buscador').then((m) => m.Buscador),
   },
 ];
