@@ -1,0 +1,19 @@
+{
+  "id": "junior-03-bindings-control-flow",
+  "level": "junior",
+  "belt": "blanco",
+  "variant": "solution",
+  "branch": {
+    "challenge": "challenge/junior/bindings-control-flow",
+    "solution": "solution/junior/bindings-control-flow"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": false,
+    "build": false
+  },
+  "files": {
+    "verify/calentamiento.spec.ts": "54d3d050de446a927396a8d05f75c2dd309b910ad0e870c62b689e4b11f8e43f"
+  },
+  "generatedAt": "2026-11-02T15:21:20.876Z"
+}
