@@ -1,0 +1,20 @@
+{
+  "id": "junior-06-http-resource",
+  "level": "junior",
+  "belt": "blanco",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/junior/http-resource",
+    "solution": "solution/junior/http-resource"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/junior-06.e2e.spec.ts": "2b64cf044c70e51b2bde1c2e6c8b7d27331858d5f02c8c15005c296a8573abee",
+    "verify/junior-06.spec.ts": "39cdb51ff0c361f6021c047063f6533e70439203f978ec3bfef1a902841ae64a"
+  },
+  "generatedAt": "2026-11-02T15:21:22.111Z"
+}
