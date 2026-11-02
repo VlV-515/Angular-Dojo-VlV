@@ -1,0 +1,19 @@
+{
+  "id": "junior-04-forms-basico",
+  "level": "junior",
+  "belt": "blanco",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/junior/forms-basico",
+    "solution": "solution/junior/forms-basico"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": false,
+    "build": false
+  },
+  "files": {
+    "verify/junior-04.spec.ts": "ec31b14778a39553eb5847c812322d4ff5b1eb3d588c68be0c467989a57c9fad"
+  },
+  "generatedAt": "2026-11-02T15:21:21.113Z"
+}
