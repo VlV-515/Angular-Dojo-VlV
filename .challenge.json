@@ -1,0 +1,19 @@
+{
+  "id": "mid-03-di-ng0203",
+  "level": "mid",
+  "belt": "azul",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/mid/di-ng0203",
+    "solution": "solution/mid/di-ng0203"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": false,
+    "build": false
+  },
+  "files": {
+    "verify/mid-03.spec.ts": "83d0ffb97235dd8478ebe87527c1b3797789e099f66ed47b17dddc14fa2d9b67"
+  },
+  "generatedAt": "2026-11-02T15:21:23.833Z"
+}
