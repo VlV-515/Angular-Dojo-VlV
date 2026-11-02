@@ -1,0 +1,19 @@
+{
+  "id": "senior-01-perf-lista",
+  "level": "senior",
+  "belt": "negro",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/senior/perf-lista",
+    "solution": "solution/senior/perf-lista"
+  },
+  "verify": {
+    "unit": false,
+    "e2e": true,
+    "build": true
+  },
+  "files": {
+    "verify/padron.e2e.spec.ts": "472ea03d46c28d85f21abd80463aaf3e00d26a2b332f43443273b87fb6ef167f"
+  },
+  "generatedAt": "2026-11-02T15:21:24.755Z"
+}
