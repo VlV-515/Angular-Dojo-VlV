@@ -1,0 +1,20 @@
+{
+  "id": "mid-02-race-condition",
+  "level": "mid",
+  "belt": "azul",
+  "variant": "challenge",
+  "branch": {
+    "challenge": "challenge/mid/race-condition",
+    "solution": "solution/mid/race-condition"
+  },
+  "verify": {
+    "unit": true,
+    "e2e": true,
+    "build": false
+  },
+  "files": {
+    "verify/buscador.e2e.spec.ts": "d3607a24756d02738d183ac5c6c10d0a6eeaf1624b0f7dd350678795026848c1",
+    "verify/buscador.spec.ts": "3fcf84cdfc1e4b5f0e32e211f427ebd561558621f1029ca30eb53f5b0d49e325"
+  },
+  "generatedAt": "2026-11-02T15:21:23.317Z"
+}
