@@ -1,0 +1,21 @@
+{
+  "name": "Angular Dojo VlV",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "npm ci && npx playwright install --with-deps chromium",
+  "postAttachCommand": "[ -f .challenge.json ] && printf '\\n  Reto listo. Lee CHALLENGE.md y luego:\\n    npm start        # ver la app (puerto 4200)\\n    npm run verify   # calificar tu arreglo\\n    npm run hint     # una pista a la vez\\n    npm run reset    # empezar de nuevo\\n\\n' || true",
+  "forwardPorts": [4200],
+  "portsAttributes": {
+    "4200": {
+      "label": "Angular dev server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["CHALLENGE.md"]
+    },
+    "vscode": {
+      "extensions": ["angular.ng-template"]
+    }
+  }
+}

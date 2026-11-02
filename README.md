@@ -16,6 +16,18 @@ honesto: si `npm run verify` queda en verde, lo resolviste. Si no, todavía no.
 
 ![npm run play, verify en rojo, se arregla el bug, verify en verde](docs/demo.gif)
 
+## Jugar en el navegador
+
+¿No quieres instalar nada? Entra a **[vlv-515.github.io/Angular-Dojo-VlV](https://vlv-515.github.io/Angular-Dojo-VlV/)**,
+elige un reto y dale a **Abrir en Codespaces**: se abre VS Code en el navegador, ya en la rama del
+reto, con dependencias y Chromium instalados. `npm run verify` funciona exactamente igual que en
+local (Jest, Playwright y `ng build` incluidos).
+
+[![Abrir en GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/VlV-515/Angular-Dojo-VlV?ref=challenge%2Fjunior%2Frouting&quickstart=1)
+
+Necesitas cuenta de GitHub; Codespaces incluye 60 horas al mes gratis. Detén el codespace al
+terminar para no gastar horas de más.
+
 ## Cómo funciona
 
 **1. Clona y elige un reto**

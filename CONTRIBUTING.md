@@ -83,6 +83,11 @@ Si tu cambio afecta el shell base, acuérdate de que **todas** las ramas lo here
 `main` no basta, corre también `npm run ci:check-challenges` para confirmar que ningún reto
 existente se rompió.
 
+El sitio de GitHub Pages vive en `site/` (HTML + JS sin build) y lee `challenges.json`; se
+publica solo con `.github/workflows/pages.yml` al hacer push a `main`. No viaja a las ramas de
+reto. `.devcontainer/` sí viaja: si lo cambias, mueve `base-v1` y regenera las ramas
+(`npm run build:branches -- --push`) para que Codespaces lo tome.
+
 ## Estilo de código y de commits
 
 - Todo el texto para quien usa el dojo (docs, briefs, mensajes del CLI) va en español (es-LATAM).

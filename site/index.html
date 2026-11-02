@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Angular Dojo VlV</title>
+    <meta
+      name="description"
+      content="Retos de Angular ya rotos. Ábrelos en el navegador con GitHub Codespaces, arréglalos y pasa el verificador."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Angular 20 · zoneless · TypeScript strict</p>
+        <h1>Angular Dojo VlV</h1>
+        <p class="lead">
+          Cada reto es una app de Angular ya rota. Tu trabajo es repararla, y
+          <code>npm run verify</code> te dice si lo lograste.
+        </p>
+        <p class="lead">Sin instalar nada: elige un reto y ábrelo en tu navegador.</p>
+        <img
+          class="demo"
+          src="demo.gif"
+          alt="npm run play, verify en rojo, se arregla el bug, verify en verde"
+          width="900"
+          loading="lazy"
+        />
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="como">
+        <h2 id="como">Cómo funciona</h2>
+        <ol class="steps">
+          <li>
+            <strong>Abre un reto.</strong> El botón <em>Abrir en Codespaces</em> levanta VS Code en
+            el navegador, ya en la rama del reto y con todo instalado (tarda un par de minutos la
+            primera vez).
+          </li>
+          <li>
+            <strong>Lee el brief y arregla.</strong> <code>CHALLENGE.md</code> se abre solo. Usa
+            <code>npm start</code> para ver la app mientras trabajas.
+          </li>
+          <li>
+            <strong>Verifica.</strong> Corre <code>npm run verify</code> en la terminal. ¿Atorado?
+            <code>npm run hint</code> da una pista a la vez; <code>npm run reset</code> empieza de
+            nuevo.
+          </li>
+        </ol>
+        <p class="note">
+          Necesitas una cuenta de GitHub. Codespaces incluye 60 horas al mes gratis; detén el
+          codespace cuando termines. Si quieres guardar tu trabajo, Codespaces te ofrece hacer fork
+          al primer commit. ¿Prefieres local?
+          <a href="https://github.com/VlV-515/Angular-Dojo-VlV#cómo-funciona">Clona el repo</a>.
+        </p>
+      </section>
+
+      <section aria-labelledby="retos">
+        <h2 id="retos">Retos</h2>
+        <p id="catalog-status" class="note">Cargando catálogo…</p>
+        <div id="catalog"></div>
+      </section>
+
+      <section aria-labelledby="reglas">
+        <h2 id="reglas">Reglas del dojo</h2>
+        <ul class="rules">
+          <li>No mires la solución antes de intentarlo.</li>
+          <li>No edites nada dentro de <code>verify/</code>: es lo que califica.</li>
+          <li>Las pistas se piden con <code>npm run hint</code>, no se buscan en el código.</li>
+          <li>El objetivo es entender el porqué, no solo poner <code>verify</code> en verde.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <a href="https://github.com/VlV-515/Angular-Dojo-VlV">Código en GitHub</a> · Licencia MIT
+    </footer>
+  </body>
+</html>
